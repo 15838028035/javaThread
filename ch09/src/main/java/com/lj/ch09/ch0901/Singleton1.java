@@ -1,4 +1,4 @@
-package com.lj.ch09;
+package com.lj.ch09.ch0901;
 
 /**
  * 实战Java高并发程序设计——单例模式

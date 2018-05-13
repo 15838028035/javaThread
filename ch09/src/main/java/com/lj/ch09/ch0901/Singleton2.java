@@ -1,4 +1,4 @@
-package com.lj.ch09;
+package com.lj.ch09.ch0901;
 
 /**
  * 使用这种策略就能将instance的实例化推迟到第一次使用Singleton2的时候。

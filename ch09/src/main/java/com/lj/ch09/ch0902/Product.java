@@ -1,9 +1,7 @@
-# 设计模式
-## 单例模式
+package com.lj.ch09.ch0902;
 
-
-## 不变模式
-1. 不变模式的核心思想
+/**
+ * 1. 不变模式的核心思想
 
 在并行开发过程中，为确保数据的一致性和正确性，又必要对对象进行同步，但是同步操作对系统性能有相当的损耗。因此可以使用一种不可改变的对象，依靠其不变形来确保并行操作在没有同步的情况下依旧保持一致性和正确性。
 
@@ -12,7 +10,6 @@
 a. 当对象创建后，其内部状态和数据不再发生任何改变；
 
 b.对象需求被共享、被多线程频繁访问。
-
 2. 不变模式的Java实现
 
 在Java语言中，不变模式的实现很简单，只需要注意一下4点：
@@ -25,15 +22,31 @@ c. 确保没有子类可以继承该类；
 
 d. 有一个可以创建完整对象的构造函数。
 
-下面利用Java代码实现了满足上面4点的不变模式的类：com.lj.ch09.ch0902.Product
+下面利用Java代码实现了满足上面4点的不变模式的类：
 
-3. JDK中不变模式的实例
-
-JDK中不变模式的使用也非常广泛。其中最为典型的是java.lang.String，此外还有所有元数据的包装类，如：
-
-java.lang.Double
-
-java.lang.Integer
-
-java.lang.Boolean
-等等。
+ *
+ */
+public final class Product { //final可以确保不会被继承  
+    private final String a;  //private确保不可被访问，final确保不可被修改  
+    private final String b;  
+    private final double c;  
+      
+    public Product(String a, String b, double c) {  
+        //创建对象时必须指定值，因为创建后将无法修改  
+        this.a = a;  
+        this.b = b;  
+        this.c = c;  
+    }  
+      
+    public String getA() {  
+        return a;  
+    }  
+  
+    public String getB() {  
+        return b;  
+    }  
+  
+    public double getC() {  
+        return c;  
+    }  
+}  
