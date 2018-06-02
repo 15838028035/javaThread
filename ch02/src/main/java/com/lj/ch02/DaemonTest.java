@@ -20,9 +20,11 @@ public class DaemonTest {
 	
 	public static void main(String []args) throws InterruptedException{
 		Thread t = new DemonThread();
-		t.setDaemon(true);
+		t.setDaemon(true);//一定要在start前设置守护状态
 		t.start();
 		
-		Thread.sleep(2000);
+		Thread.sleep(4000);
+		
+		//要守护线程不存在，守护线程自动退出,不再执行
 	}
 }
