@@ -7,6 +7,8 @@
   <packaging>pom</packaging>
   <modules>
     <module>ch09</module>
+    <module>ch99</module>
+    <module>ch02</module>
   </modules>
   
     <properties>
