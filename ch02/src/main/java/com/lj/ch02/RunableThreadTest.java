@@ -10,9 +10,9 @@ public class RunableThreadTest implements Runnable{
 	public static void main(String []args) throws Exception{
 		RunableThreadTest runableThreadTest = new RunableThreadTest();
 		
-		Thread t1 = new Thread(runableThreadTest);
-		Thread t2 = new Thread(runableThreadTest);
-		Thread t3 = new Thread(runableThreadTest);
+		Thread t1 = new Thread(runableThreadTest,"Thread-01");
+		Thread t2 = new Thread(runableThreadTest,"Thread-02");
+		Thread t3 = new Thread(runableThreadTest,"Thread-03");
 
 		t1.start();
 		t2.start();
